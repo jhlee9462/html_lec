@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100vh;
+        }
+
+        #hire-page {
+            background-image: url("me.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+        }
+
+        #nav {
+            width: 100%;
+            height: 9.5vh;
+            background-color: rgb(228, 228, 228);
+            color: white;
+            margin: 0;
+            border-bottom: 0.5vh white solid;
+            overflow: hidden;
+            font-weight: bold;
+        }
+
+        #black-line {
+            background-color: rgb(90, 90, 90);
+            position: absolute;
+            width: 76%;
+            height: 0.1px;
+            top: 0vh;
+            left: 12%;
+            box-shadow: inset 0 1px 1px gray;
+        }
+
+        #logo {
+            margin-left: 50px;
+        }
+        
+        .lmenu {
+            float: left;
+            height: inherit;
+            width: 160px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .rmenu {
+            float: right;
+            width: fit-content;
+            margin: 4vh 10px;
+        }
+
+        #search {
+            margin-right: 50px;
+            border: 1px white solid;
+            border-radius: 15px;
+            padding: 0 10px;
+        }
+
+        #title {
+            text-align: center;
+            padding-top: 7vh;
+            font-size: 45px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #sub-title {
+            text-align: center;
+            color: gray;
+            margin-bottom: 5vh;
+        }
+
+        #detail {
+            margin: 0 15vh;
+            border-top: 1px black solid;
+            border-bottom: 1px black solid;
+            box-shadow:
+                inset 0 1px gray,
+                inset 0 -1px gray;
+            padding: 20px 20px 20px 60px;
+        }
+
+        .d-title {
+            font-size: 17px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .d-detail {
+            margin-bottom: 15px;
+        }
+
+        .more {
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .ra-bracket {
+            color: orange;
+        }
+
+        .dot {
+            color: orange;
+            font-weight: bold;
+            margin-right: 30px;
+        }
+
+        .ideal-talent {
+            display: inline-block;
+            font-weight: bold;
+            width: 100px;
+            margin-right: 20px;
+        }
+
+        #site-button {
+            margin-top: 40px;
+            border-radius: 50px;
+            background-color: orange;
+            width: fit-content;
+            padding: 10px 90px;
+            font-weight: bold;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+        <span id="black-line"></span>
+        <span class="lmenu" id="logo"><img src="logo1.png" width="140px"></span>
+        <span class="lmenu">회사소개</span>
+        <span class="lmenu">사업영역</span>
+        <span class="lmenu">투자정보</span>
+        <span class="lmenu">인재채용</span>
+        <span class="rmenu" id="search">제품검색</span>
+        <span class="rmenu">내 삶속의 회사</span>
+        <span class="rmenu">알기쉬운 제품공정</span>
+    </div>
+    <div id="hire-page">
+        <div id="title">
+            CHALLENGE ME.
+        </div>
+        <div id="sub-title">
+            우리와 함께 꿈을 키워 갈 인재를 기다립니다.
+        </div>
+        <div id="detail">
+            <div class="d-title">
+                직무특성 및 소개
+            </div>
+            <div class="d-detail">
+                한국 아이티 산업의 역사를 이끌어 온 우리회사가 미래를 선도하는 글로벌 리더로 함께 성장해 나갈 인재를 모집합니다.<br>
+                글로벌 시장 진출 및 사업다각화가 본격화된에 따라 체계적&#183;전문적인 인재 육성의 중요성을 인식하고, 그에 걸맞은 다양한
+                교육프로그램과 인사제도를 폭넓게 실시하고 있습니다.
+            </div>
+            <div class="more"><a href="#">more <span class="ra-bracket">></span></a></div>
+            <hr>
+            <br>
+            <div class="d-title">
+                인재상
+            </div>
+            <div class="d-detail">
+                우리는 신용과 의리에 기반하여 '도전, 헌신, 정도'를 3대 핵심가치로 삼는 인재상을 추구하고 있습니다.<br><br>
+                <div class="ideal-talent">Challenge</div><span class="dot">&#183;</span>
+                <span class="it-detail">기존의 틀에 안주하지 않고 변화와 혁신을 통해 최고를 추구하는 도전적인 사람</span><br><br>
+                <div class="ideal-talent">Dedication</div><span class="dot">&#183;</span>
+                <span class="it-detail">회사, 고객, 동료와의 인연을 소중히 여기고 큰 목표를 위해 혼신의 힘을 다하는 헌신적인 사람</span><br><br>
+                <div class="ideal-talent">Integrity</div><span class="dot">&#183;</span>
+                <span class="it-detail">자긍심을 바탕으로 원칙에 따라 바르고 공정하게 행동하는 정도의 사람</span><br><br>
+                <div class="more"><a href="#">more <span class="ra-bracket">></span></a></div>
+            </div>
+        </div>
+        <div id="site-button"><a href="#" style="color: white">채용사이트 바로가기</a></div>
+    </div>
+</body>
+
+</html>

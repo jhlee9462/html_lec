@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+    <form name="form1">
+        <input type="checkbox" name="ck" class="ck">농구
+        <input type="checkbox" name="ck" class="ck">낚시
+        <input type="checkbox" name="ck" class="ck">게임
+        <input type="checkbox" name="ck" class="ck">바둑
+        <input type="checkbox" name="ck" class="ck">여행
+        <input type="button" value="선택하신 취미의 개수" onclick="go()">
+    </form><br>
+    <div id="rs"></div>
+
+    <script>
+        let rs = document.getElementById("rs");
+
+        function go() {
+            rs.style.color = "blue";
+            rs.innerHTML = document.querySelectorAll(".ck:checked").length + "개를 선택함";
+        }
+    </script>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+    <form name="form1">
+        <input type="checkbox" name="ck" class="ck">농구
+        <input type="checkbox" name="ck" class="ck">낚시
+        <input type="checkbox" name="ck" class="ck">게임
+        <input type="checkbox" name="ck" class="ck">바둑
+        <input type="checkbox" name="ck" class="ck">여행
+        <input type="button" value="선택하신 취미의 개수" id="go">
+    </form><br>
+    <div id="rs"></div>
+
+    <script>
+        /*$(function () {
+            $("#go").click(function () {
+                $("#rs").text($(".ck:checked").length + "개를 선택함").css("color", "blue");
+            });
+        });*/
+        // 위 코드를 자바스크립트로 변환해주세요
+    </script>
+</body>
+</html> -->

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+    <div id="rs" class="container">
+        <input type="text" id="id" placeholder="아이디"><br>
+        <input type="password" id="pw" placeholder="비밀번호"><br>
+        <button id="login">로그인</button>
+    </div>
+
+    <script>
+        $().ready(function () {
+            $("input").focus(function () {
+                $(this).css("background-color", "#eaeaea");
+            }).blur(function () {
+                $(this).css("background-color", "#fff");
+            });
+
+            $("#login").click(function () {
+                var id = $("#id").val();
+                var pw = $("#pw").val();
+                alert("아이디 : " + id + "\n비밀번호 : " + pw);
+            });
+        });
+    </script>
+</body>
+</html>

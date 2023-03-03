@@ -1,0 +1,11 @@
+function startMethod() {
+	let xhr = new XMLHttpRequest();
+	let url = "result.jsp?" + getParamValue();
+	
+	xhr.open("get", url, true)
+}
+
+function getParamValue() {
+	let data = "name=" + name + "&age=" + age + "&phone=" + phone;
+	return data;
+}

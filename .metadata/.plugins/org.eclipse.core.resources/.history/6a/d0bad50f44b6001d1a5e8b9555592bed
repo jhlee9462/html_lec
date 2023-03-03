@@ -1,0 +1,7 @@
+function startMethod() {
+	let xhr = new XMLHttpRequest();
+	let url = "result.jsp";
+	
+	
+	xhr.open("get", url, true)
+}

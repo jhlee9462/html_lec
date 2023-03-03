@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- click, bind -->
+    <input type="button" id="btn1" value="버튼1" onclick="process()">
+    <input type="button" id="btn2" value="버튼2">
+    <input type="button" id="btn3" value="버튼3">
+
+    <script>
+        function process() {
+            alert("버튼1");
+        }
+        /*
+            $ 기호 : 제이쿼리를 의미, 제이쿼리에 접근할 수 있는 식별자
+            $() 함수
+                함수에 전달되는 매개변수는 반드시 따옴표 안에 작성(문자열의 형태로 전달)
+                선택된 html요소를 제이쿼리에서 이용할 수 있는 형태로 생성해 주는 역할
+                함수의 인수 : class, id, 태그
+                $()를 이용하여 생성된 요소를 제이쿼리 객체라고 함
+        */
+        /*
+            ready() : 실행, onload()
+        */
+        $(document).ready(function () {
+            // $객체.이벤트(function(){})
+            // document.getElementById("btn3").click = function () {
+            //     alert("버튼2");
+            //};
+            $("#btn2").click(function () {
+                alert("버튼2");
+            });
+
+            $("#btn3").bind("click", function () {
+                alert("버튼3");
+                $(this).off();
+            });
+        });
+    </script>
+
+</body>
+
+</html>

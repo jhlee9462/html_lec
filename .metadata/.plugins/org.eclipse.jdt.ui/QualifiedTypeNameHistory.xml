@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.eclipse.jdt.internal.compiler.apt.model.AnnotationMemberValue"/>
+    <fullyQualifiedTypeName name="java.lang.Class"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="java.sql.PseudoColumnUsage"/>
+    <fullyQualifiedTypeName name="org.apache.catalina.ant.DeployTask"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="com.exam.biz.LoginBiz"/>
+    <fullyQualifiedTypeName name="java.io.DataOutput"/>
+    <fullyQualifiedTypeName name="com.exam.dao.LoginDao"/>
+    <fullyQualifiedTypeName name="java.nio.file.AccessDeniedException"/>
+    <fullyQualifiedTypeName name="com.exam.entity.LoginEntity"/>
+    <fullyQualifiedTypeName name="org.eclipse.jdt.internal.compiler.lookup.AptBinaryLocalVariableBinding"/>
+    <fullyQualifiedTypeName name="com.exam.entity.EmpEntity"/>
+    <fullyQualifiedTypeName name="com.exam.biz.EmpBiz"/>
+    <fullyQualifiedTypeName name="com.exam.dao.EmpDao"/>
+    <fullyQualifiedTypeName name="javax.sql.rowset.JoinRowSet"/>
+    <fullyQualifiedTypeName name="book.dto.LoginDTO"/>
+    <fullyQualifiedTypeName name="book.biz.LoginBiz"/>
+    <fullyQualifiedTypeName name="book.dao.LoginDAO"/>
+    <fullyQualifiedTypeName name="javax.activation.DataSource"/>
+    <fullyQualifiedTypeName name="javax.sql.DataSource"/>
+    <fullyQualifiedTypeName name="javax.naming.InitialContext"/>
+    <fullyQualifiedTypeName name="java.sql.Statement"/>
+    <fullyQualifiedTypeName name="javax.naming.Context"/>
+    <fullyQualifiedTypeName name="java.io.Closeable"/>
+    <fullyQualifiedTypeName name="org.apache.catalina.valves.rewrite.Substitution.StaticElement"/>
+    <fullyQualifiedTypeName name="java.lang.Readable"/>
+    <fullyQualifiedTypeName name="javax.websocket.Session"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="common.JdbcTemplate"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="org.eclipse.jdt.internal.compiler.parser.RecoveredRequiresStatement"/>
+    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="book.biz.BookBiz"/>
+    <fullyQualifiedTypeName name="book.dao.BookDAO"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="book.dto.BookDTO"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+</qualifiedTypeNameHistroy>

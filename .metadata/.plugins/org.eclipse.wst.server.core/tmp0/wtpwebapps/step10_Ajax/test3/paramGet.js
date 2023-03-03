@@ -1,0 +1,21 @@
+function startMethod() {
+	let xhr = new XMLHttpRequest();
+	let url = "result.jsp?" + getParamValue();
+	
+	xhr.onreadystatechange = function () {
+		if (xhr.status === 200 && xhr.readyState === 4) {
+			document.getElementById("display").innerHTML = xhr.responseText;
+		}
+	};
+	
+	xhr.open("get", url, true);
+	xhr.send(null);
+}
+
+function getParamValue() {
+	let name = encodeURI(document.getElementById("name").value);
+	let age = encodeURI(document.getElementById("age").value);
+	let phone = encodeURI(document.getElementById("phone").value);
+	let data = "name=" + name + "&age=" + age + "&phone=" + phone;
+	return data;
+}

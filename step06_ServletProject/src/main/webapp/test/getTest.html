@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 
+	404 에러 : 페이지를 못찾음 ( 파일이 없는 경우, 잘못적은 이름 )
+	405 에러 : 메소드를 못찾음
+ -->
+<body>
+    <form action="../get.do" method="get">
+        이름 : <input type="text" name="irum"><br>
+        암호 : <input type="text" name="amho"><br>
+        <input type="submit" value="전송">
+        <input type="reset" value="취소">
+    </form>
+</body>
+</html>
+<!-- 
+	get 방식 ( 쿼리스트링 )
+	
+	http://127.0.0.1:8080/servlet/get.do?irum=11&amho=11
+ -->

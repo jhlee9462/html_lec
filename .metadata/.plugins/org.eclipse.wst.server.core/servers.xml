@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v9.0 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v9.0 Server at localhost" name="Tomcat v9.0 Server at localhost" runtime-id="Apache Tomcat v9.0" server-type="org.eclipse.jst.server.tomcat.90" server-type-id="org.eclipse.jst.server.tomcat.90" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="8">
+    <list key="modules" value0="step01_htmlProject1::org.eclipse.jst.jee.server:step01_htmlProject1::jst.web::4.0" value1="step03_htmlProject3::org.eclipse.jst.jee.server:step03_htmlProject3::jst.web::4.0" value2="step02_htmlProject2::org.eclipse.jst.jee.server:step02_htmlProject2::jst.web::4.0" value3="step05_jQuery::org.eclipse.jst.jee.server:step05_jQuery::jst.web::4.0" value4="step06_ServletProject::org.eclipse.jst.jee.server:step06_ServletProject::jst.web::4.0" value5="step07_JSPProject::org.eclipse.jst.jee.server:step07_JSPProject::jst.web::4.0" value6="step08_LoginProject::org.eclipse.jst.jee.server:step08_LoginProject::jst.web::4.0" value7="step09_BookProject::org.eclipse.jst.jee.server:step09_BookProject::jst.web::3.1" value8="step10_Ajax::org.eclipse.jst.jee.server:step10_Ajax::jst.web::4.0"/>
+  </server>
+</servers>

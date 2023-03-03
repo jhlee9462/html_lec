@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var day = new Array("일", "월", "화", "수", "목", "금", "토");
+		var date = new Date();
+		/* document.write(date); */
+		
+		document.write("오늘은 "
+				+ date.getFullYear() + "년 "
+				+ (date.getMonth() + 1) + "월 "
+				+ date.getDate() + "일 "
+				+ day[date.getDay()] + "요일입니다<br>");
+		
+		document.write("현재시각은 "
+				+ date.getHours() + "시 "
+				+ date.getMinutes() + "분 "
+				+ date.getSeconds() + "초입니다<br>");
+		
+	</script>
+</body>
+</html>

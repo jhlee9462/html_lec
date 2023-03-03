@@ -1,0 +1,67 @@
+<!-- jQuery 로 동작 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <input type="text" id="txt" size="30px" name="text">
+    <input type="button" value="출력1" id="btn1">
+    <input type="button" value="출력2" id="btn2">
+    <br><br>
+    <div id="view1"></div>
+    <div id="view2"></div>
+
+    <script>
+        $().ready(function () {
+            $("#btn1").on("click", function () {
+                $("#view1").text($("#txt").val());
+            });
+
+            $("#btn2").on("click", function () {
+                $("#view2").html($("#txt").val());
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+<!-- html, js 로 동작 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <input type="text" id="txt" size="30px" name="text">
+    <input type="button" value="출력1" onclick="process1()">
+    <input type="button" value="출력2" onclick="process2()">
+
+    <div id="view1"></div>
+    <div id="view2"></div>
+
+    <script>
+        function process1() {
+            document.getElementById("view1").innerText = document.getElementById("txt").value;
+        }
+
+        function process2() {
+            document.getElementById("view2").innerHTML = document.getElementById("txt").value;
+        }
+    </script>
+</body>
+
+</html> -->

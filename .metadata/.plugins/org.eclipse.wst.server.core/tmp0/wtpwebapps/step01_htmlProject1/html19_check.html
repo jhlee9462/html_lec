@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="html01_h.html" method="get">
+		<table border="">
+			<tr>
+				<td>성별</td>
+				<td>
+					<input type="radio" name="gender" value="man">남자
+					<input type="radio" name="gender" value="woman">여자
+				</td>
+			</tr>
+			<tr>
+				<td>취미</td>
+				<td>
+					<input type="checkbox" name="hobby" value="climbing">등산
+					<input type="checkbox" name="hobby" value="traveling">여행
+					<input type="checkbox" name="hobby" value="fishing">낚시
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+				<input type="button" value="목록">
+				<input type="submit" value="전송">
+				<input type="reset" value="취소">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
+<!-- 
+	여러 건의 데이터 중에서 하나만 선택할 때는 input의 radio
+	여러 건의 데이터 중에서 여러개를 선택할 때는 input의 checkbox
+ -->

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form>
+		*** 삼각형의 넓이 ***<br>
+		밑변 입력 : <input type="text" id="base">
+		높이 입력 : <input type="text" id="height">
+		<input type="button" value="실행" onclick="sum()">
+	</form>
+</body>
+</html>

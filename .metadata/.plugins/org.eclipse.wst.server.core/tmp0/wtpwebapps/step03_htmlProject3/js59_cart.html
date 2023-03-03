@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #shopping_cart {
+            width: 800px;
+            height: 120px;
+            padding: 20px;
+            border: 2px solid red;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>원하는 상품을 카트에 담으세요</p>
+    <div id="shopping_cart" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="shopping_cart" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img id="img1" src="image/bag1.jpg" draggable="true" ondragstart="drag(event)">
+        <img id="img2" src="image/bag2.jpg" draggable="true" ondragstart="drag(event)">
+        <img id="img3" src="image/bag3.jpg" draggable="true" ondragstart="drag(event)">
+        <img id="img4" src="image/bag4.jpg" draggable="true" ondragstart="drag(event)">
+        <img id="img5" src="image/bag5.jpg" draggable="true" ondragstart="drag(event)">
+        <img id="img6" src="image/bag6.jpg" draggable="true" ondragstart="drag(event)">
+    </div>
+    <script type="text/javascript">
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+            // 드래그 이벤트가 발생하는 요소의 id의 "text"를 저장
+        }
+
+        function allowDrop(ev) {
+            ev.preventDefault();
+            // drop 이 가능하도록 요소의 모든 기본 속성을 차단
+        }
+
+        function drop(ev) {
+            //ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            // 저장한 "text를 가져옴"
+            ev.target.appendChild(document.getElementById(data));
+            // 가져온 text를 target에 저장
+        }
+    </script>
+</body>
+
+</html>

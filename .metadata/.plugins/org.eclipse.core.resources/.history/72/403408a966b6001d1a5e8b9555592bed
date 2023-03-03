@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>onreadystatechange 속성 사용 - JSON 응답</h2>
+	<hr>
+	
+	<script>
+		window.onload = function() {
+			let xhr = new XMLHttpRequest();
+			
+			xhr.onreadystatechange = function() {
+				if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) { // XMLHttpRequest.DONE ==> 4
+					let str = xhr.responseText;
+				}
+			};
+			
+			xhr.open("get", "sample.json", true);
+			xhr.send(null);
+		};
+	</script>
+</body>
+</html>

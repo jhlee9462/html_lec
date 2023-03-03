@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+        .container {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            height: fit-content;
+            width: 350px;
+            border: 1px dotted black;
+            padding-left: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .login {
+            position: absolute;
+            top: 24px;
+            left: 180px;
+            height: 40px;
+            width: 80px;
+            background-color: #47C83E;
+            border: 1px solid #47C83E;
+            font-size: 10px;
+            color: white;
+            font-weight: bold;
+            padding-top: 5px;
+            padding-left: 10px;
+        }
+
+        input {
+            border: 0.5px solid #D5D5D5;
+        }
+
+    </style>
+</head>
+<!-- 처리조건
+1. emp 객체에 id(abcd), pw(1234), name(홍길동), point(1250)을 JSON 으로 입력하세요
+2. id 와 pw 가 일치하는 id="confirm" 에 출력
+    홍길동님 환영합니다.
+    현재 포인트는 1250점입니다 <--- blue
+    
+    id 와 pw 중 하나라도 틀리면 id="confirm"에 출력
+    아이디 또는 비밀번호가 틀립니다 <--- red, id, pw 를 지우고 id 에 포커스 이동
+
+    id, pw 중 하나도 입력이 안되면
+    아이디와 비밀번호를 입력해주세요 <-- black, id에 포커스 이동
+-->
+
+<body>
+    <div id="result" class="container">
+        <label for="input">[로그인 화면]</label><br>
+        <input type="text" id="id" placeholder="아이디">
+        <span>아이디를 입력하세요</span><br>
+        <input type="text" id="pw" placeholder="비밀번호">
+        <span>비밀번호를 입력하세요</span><br>
+        <button id="login">Login</button><br>
+        <span id="confirm"></span>
+    </div>
+
+    <script>
+        $().ready(function () {
+            let emp = {
+                "id": "abcd",
+                "pw": "1234",
+                "name": "홍길동",
+                "point": 1250
+            };
+
+            $("#id, #pw").focus(function () {
+                $(this).css("background-color", "#ffff00");
+            });
+
+            $("#id, #pw").blur(function () {
+                $(this).css("background-color", "#fff");
+            });
+
+            $("#login").click(function () {
+                let id = $("#id").val();
+                let pw = $("#pw").val();
+
+                if (id === "" || pw === "") {
+                    $("#confirm").css("color", "black").html("<br>아이디와 비밀번호를 입력해주세요");
+                    $("#id").focus();
+                } else if (id != emp.id || pw != emp.pw) {
+                    $("#confirm").css("color", "red").html("<br>아이디 또는 비밀번호가 틀립니다.");
+                    $("#id, #pw").val("");
+                    $("#id").focus();
+                } else {
+                    $("#confirm").css("color", "blue").html("<br>" + emp.name + "님 환영합니다.<br>현재 포인트는 " + emp.point + "점입니다");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

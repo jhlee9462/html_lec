@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <button id="btn1">slideUp</button>&nbsp;&nbsp;&nbsp;
+    <button id="btn2">slideDown</button>&nbsp;&nbsp;&nbsp;
+    <button id="btn3">fadeIn</button>&nbsp;&nbsp;&nbsp;
+    <button id="btn4">fadeOut</button>&nbsp;&nbsp;&nbsp;
+    <button id="btn5">slide toggle</button>&nbsp;&nbsp;&nbsp;
+    <button id="btn6">toggle</button>&nbsp;&nbsp;&nbsp;
+    <button id="btn7">chaining</button>&nbsp;&nbsp;&nbsp;
+    <p>이미지</p>
+    <img src="../image/dog.png" id="img">
+
+    <script>
+        $().ready(function () {
+            $("#btn1").click(function () {
+                $("#img").slideUp(1000);
+            });
+        });
+
+        $().ready(function () {
+            $("#btn2").click(function () {
+                $("#img").slideDown(1000);
+            });
+        });
+
+        $().ready(function () {
+            $("#btn3").click(function () {
+                $("#img").fadeIn(1000);
+            });
+        });
+
+        $().ready(function () {
+            $("#btn4").click(function () {
+                $("#img").fadeOut(1000);
+            });
+        });
+
+        $().ready(function () {
+            $("#btn5").click(function () {
+                $("#img").slideToggle(1000);
+            });
+        });
+
+        $().ready(function () {
+            $("#btn6").click(function () {
+                $("#img").toggle(1000);
+            });
+        });
+
+        $().ready(function () {
+            $("#btn7").click(function () {
+                $("#img").show(3000).fadeOut(3000).slideDown(3000);
+            });
+        });
+
+    </script>
+</body>
+
+</html>

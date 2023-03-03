@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var t = new Date();
+		document.write(t.getHours() + ":" + t.getMinutes() + ":" + t.getSeconds());
+		
+		window.setInterval(function() {
+			location.reload(); /* 새로고침 메서드 */
+		}, 1000);
+	</script>
+</body>
+</html>

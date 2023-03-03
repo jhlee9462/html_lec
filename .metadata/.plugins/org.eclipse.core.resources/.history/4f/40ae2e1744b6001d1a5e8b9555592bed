@@ -1,0 +1,10 @@
+function startMethod() {
+	let xhr = new XMLHttpRequest();
+	let url = "result.jsp?" + getParamValue();
+	
+	xhr.open("get", url, true)
+}
+
+function getParamValue() {
+	
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function shape() {
+			document.write("*** 도형의 넓이 ***<br>");
+		}
+		
+		shape();
+		
+		function circleSize(r) {
+			document.write("원의 넓이 : " + (r * r * 3.14) + "<br>");
+		}
+		
+		circleSize(10);
+		
+		function getSquareSize(w, h) {
+			return w * h;
+		}
+		
+		document.write("사각형의 넓이 : " + getSquareSize(4, 5) + "<br>");
+	</script>
+</body>
+</html>

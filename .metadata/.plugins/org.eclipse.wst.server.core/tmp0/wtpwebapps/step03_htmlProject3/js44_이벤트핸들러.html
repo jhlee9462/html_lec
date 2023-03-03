@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#box {
+	background-color: skyblue;
+	border: 1px solid black;
+	padding: 5px;
+	width: 300px;
+	height: 200px;
+}
+</style>
+</head>
+<body>
+	<div id="box">
+		<button onclick="addEventHandler()" id="startbtn">시작</button>
+		<button onclick="removeEventHandler()" id="stopbtn">정지</button>
+	</div>
+	<p id="disp"></p>
+	<script type="text/javascript">
+		function addEventHandler() {
+			/* 이벤트 처리기 등록 */
+			document.getElementById("box").addEventListener("mousemove", myFunction);
+			/* target.addEventListener(type, 처리기) */
+		}
+		function removeEventHandler() {
+			document.getElementById("box").removeEventListener("mousemove", myFunction);
+		}
+		
+		function myFunction() {
+			document.getElementById("disp").innerHTML = "x좌표 : " + event.x + "&nbsp;&nbsp;&nbsp;" + "y좌표 : " + event.y;
+		}
+	</script>
+</body>
+</html>

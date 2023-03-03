@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="button" value="simple.html" onclick="load(value)">
+	<script>
+		let httpRequest = null;
+		
+		function load(url) {
+			httpRequest = getXMLHttpRequest(); // 통신 객체 생성
+		}
+	</script>
+</body>
+</html>

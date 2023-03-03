@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div {
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	<div>
+		<h3>길가메시 서사시</h3>
+		<video width="480" id="vdo" controls="controls" autoplay="autoplay" muted="muted">
+			<source src="video/gilgamesh2.mp4">
+		</video>
+		<br><br>
+		<button onclick="btnPlay()">재생</button>
+		<button onclick="btnPause()">일시정지</button>
+		<button onclick="btnStop()">정지</button>
+		<button onclick="btnRate1()">등배속</button>
+		<button onclick="btnRate2()">2배속</button>
+		<br>
+		<button onclick="btnPrev()"><<</button>
+		<button onclick="btnNext()">>></button>
+		<button onclick="btnNormalSize()">등배화면</button>
+		<button onclick="btnLargeSize()">2배화면</button>
+		<button onclick="btnSmallSize()">1/2배화면</button>
+	</div>
+	<script type="text/javascript">
+		var vdo = document.getElementById("vdo");
+		
+		function btnPlay() {
+			vdo.play();
+		}
+		
+		function btnPause() {
+			vdo.pause();
+		}
+		
+		function btnStop() {
+			vdo.pause();
+			vdo.currentTime = 0;
+		}
+		
+		function btnRate1() {
+			vdo.playbackRate = 1;
+		}
+		
+		function btnRate2() {
+			vdo.playbackRate = 2;
+		}
+		
+		function btnPrev() {
+			vdo.currentTime -= 5;
+		}
+		
+		function btnNext() {
+			vdo.currentTime += 5;
+		}
+		
+		function btnNormalSize() {
+			vdo.width = 480;
+		}
+		
+		function btnLargeSize() {
+			vdo.width = 960;
+		}
+		
+		function btnSmallSize() {
+			vdo.width = 240;
+		}
+	</script>
+</body>
+</html>

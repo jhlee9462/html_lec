@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>onreadystatechange 속성 사용 - xml 응답</h2>
+	<hr>
+	
+	<script>
+		window.onload = function() {
+			let xhr = new XMLHttpRequest();
+			
+			xhr.open("get", "samlpe.xml", false);
+		};
+	</script>
+</body>
+</html>

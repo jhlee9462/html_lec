@@ -1,0 +1,4 @@
+function sum() {
+	let xhr = new XMLHttpRequest();
+	
+}

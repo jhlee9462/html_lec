@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+input {
+	line-height: 20px;
+	height: 20px;
+}
+</style>
+</head>
+<body>
+	<label for="input">[로그인 화면]</label>
+	<br>
+	<br>
+	<input type="text" id="id">
+	<span>아이디를 입력하세요</span>
+	<br>
+	<input type="text" id="pw">
+	<span>비밀번호를 입력하세요</span>
+	<br>
+	<button id="log" onclick="login()">Login</button>
+	<br>
+	<span id="confirm"></span>
+	<script type="text/javascript">
+		var emp = {
+			"id" : "abcd",
+			"pw" : "1111",
+			"name" : "홍길동",
+			"point" : "1250"
+		};
+
+		function login() {
+			if (document.getElementById("id").value == emp.id
+					&& document.getElementById("pw").value == emp.pw)
+				document.getElementById("confirm").innerHTML = "<span style='color: red'>"
+						+ emp.name
+						+ "님 환영합니다.<br>현재 포인트는 "
+						+ emp.point
+						+ "점입니다.</span>";
+			else
+				document.getElementById("confirm").innerHTML = "<span style='color: red'>아이디 혹은 비밀번호가 잘못되었습니다.</span>";
+		}
+	</script>
+</body>
+</html>

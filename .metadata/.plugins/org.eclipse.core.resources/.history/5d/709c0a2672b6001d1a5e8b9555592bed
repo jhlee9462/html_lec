@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>계정과 패스워드를 입력하세요</h3>
+	<form id="loginf" action="login.jsp">
+		<table>
+			<tr>
+				<td><label for="id">계정</label></td>
+				<td><input type="text" name="id" id="id"></td>
+			</tr>
+			<tr>
+				<td><label for="pw">비밀번호</label></td>
+				<td><input type="text" name="pw" id="pw"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" id="loginb" value="로그인"></td>
+				<td><output></output></td>
+			</tr>
+		</table>
+	</form>
+	
+	<script>
+		window.addEventListener("load", () => {
+			document.getElementById("loginb").onclick = handleButtonPress;
+		});
+		
+		let xhr;
+		let id;
+		
+		let handleButtonPress = (e) => {
+			e.preventDefault(); // 비동기처리, submit 처리를 막는다.
+			xhr = new XMLHttpRequest();
+			let form = document.querySelector("#loginf");
+			let id = document.querySelector("#id");
+			let pw = document.querySelector("#pw");
+			
+			let queryString = "id=" + encodeURI(id.value) + "&pw=" + encodeURI(pw.value); 
+			
+			xhr.onload = () => {
+				if (xhr.status === 200 && xhr.readyState === 4) {
+					let str = xhr.responseText;
+					let json = JSON.parse(str);
+					document.querySelector("output").innerHTML = json.result;
+				}
+			};
+			
+			xhr.open("get", form.getAttribute("action") + "?" + queryString, true);
+			xhr.send(null);
+		};
+	</script>
+</body>
+</html>

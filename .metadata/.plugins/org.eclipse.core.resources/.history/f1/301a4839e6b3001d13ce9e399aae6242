@@ -1,0 +1,42 @@
+<%@page import="java.util.Locale"%>
+<%@page import="java.text.NumberFormat"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="book.dto.BookDTO" %>
+<%@ include file="../menu.jsp" %>
+	<%
+	request.setCharacterEncoding("UTF-8");
+	%>
+	<div align="center">
+	<h3>도서전체확인</h3>
+	<br>
+	<table border="1" width="80%">
+		<tr>
+			<td>도서코드</td>
+			<td>책이름</td>
+			<td>저자</td>
+			<td>출판사</td>
+			<td>가격</td>
+		</tr>
+		<%
+		ArrayList<BookDTO> list = (ArrayList<BookDTO>) request.getAttribute("bookList");
+		NumberFormat nf = NumberFormat.getNumberInstance();
+		for (BookDTO dto : list) {
+		%>
+			<tr>
+				<td><%= dto.getIsbn() %></td>
+				<td><%= dto.getTitle() %></td>
+				<td><%= dto.getAuthor() %></td>
+				<td><%= dto.getCompany() %></td>
+				<td><%= nf.format(dto.getPrice()) + "원" %></td>
+			</tr>
+		<%
+		}
+		%>
+	</table>
+	<br>
+	<a href="/book/book/bookInput.jsp" style="text-decoration: none">[도서등록]</a>
+	</div>
+</body>
+</html>

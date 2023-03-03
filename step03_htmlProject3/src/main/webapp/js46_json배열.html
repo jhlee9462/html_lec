@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body onload="init()">
+	<h3>json 표기법</h3>
+	<div id="rs"></div>
+
+	<script type="text/javascript">
+		function init() {
+			var emp = [
+				{"name" : "kim", "age" : 20},
+				{"name" : "lee", "age" : 30},
+				{"name" : "park", "age" : 40}
+			];
+			var msg = "";
+			msg += "이름 : " + emp[0].name + "<br>나이 : " + emp[0].age + "<br><br>";
+			msg += "이름 : " + emp[1].name + "<br>나이 : " + emp[1].age + "<br><br>";
+			msg += "이름 : " + emp[2].name + "<br>나이 : " + emp[2].age + "<br><br>";
+			
+			document.getElementById("rs").innerHTML = msg;
+		}
+	</script>
+</body>
+</html>

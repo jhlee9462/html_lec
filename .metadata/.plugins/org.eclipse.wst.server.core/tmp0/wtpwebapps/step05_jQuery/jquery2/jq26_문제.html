@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		span {
+			font-size: 15px;
+			font-weight: bold;
+			color: orange;
+		}
+
+		#log1,
+		#log2 {
+			/* border: 1px dotted gray; */
+			padding: 20px;
+			width: 350px;
+		}
+
+		table {
+			width: 400px;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("#loginb").click(() => {
+				let id = $("#id").val();
+				let pw = $("#pw").val();
+				if (id === "" || pw === "") {
+					$("#id").focus();
+					$("#result").css("color", "black").html("아이디와 비밀번호를 입력해 주세요");
+				} else {
+					$.getJSON("idpw.txt", (data) => {
+
+						$.each(data, (index, entry) => {
+							if (id === entry.id && pw === entry.pw) {
+								$("#loginf")[0].reset();
+								$("#id").focus();
+								$("#result").css("color", "blue").html(entry.name + "님이 로그인 하셨습니다.<br>현재 보유하신 포인트는 " + entry.point + "점입니다");
+								return false;
+							} else {
+								$("#result").css("color", "red").html("아이디 또는 비밀번호가 틀립니다");
+								$("#loginf")[0].reset();
+								$("#id").focus();
+							}
+						});
+					});
+				}
+			});
+		});
+		/* $(document).ready(function(){
+			$('#loginb').click(function(){
+				var id = $('#id').val();
+				var pw = $('#pw').val();
+				$.getJSON('idpw.txt', function(data){
+					$.each(data, function(index ,val){
+						if(id==''&&pw==''){
+							$('#result').html("아이디와 비밀번호를 입력해주세요").css('color','black')
+						}else{
+							if(id==val.id&&pw==val.pw){
+								$('#result').html(val.name+"님 환영합니다<br>"+"점수는"+val.point+"점입니다.").css('color','blue')
+								return false;
+							}else{
+								$('#result').html("아이디또는 비밀번호가 틀립니다.").css('color','red')
+							}
+						}
+						
+					})
+				})
+				
+				
+			})
+			
+			
+		}); */
+	</script>
+</head>
+
+<body>
+	<div id="log1">
+		<span>계정과 패스워드를 입력해 주세요</span>
+		<form id="loginf">
+			<table>
+				<tr>
+					<td>계정</td>
+					<td width="150px"><input type="text" id="id" name="id" /></td>
+					<td><input type="button" id="loginb" name="loginb" value="로그인" />
+						<input type="button" id="regb" name="regb" value="회원가입" />
+					</td>
+				</tr>
+				<tr>
+					<td>패스워드</td>
+					<td><input type="password" id="pw" name="pw" /></td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<div id="result"></div>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+
+</html>

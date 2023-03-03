@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="registerCheck.js"></script>
+</head>
+<body>
+	<form name="regForm" method="post" action="registerProc.jsp">
+		<table width="80%" align="center" border="0" cellspacing="0"
+			cellpadding="5">
+			<tr>
+				<td align="center" valign="middle">
+					<table width="90%" border="1" bgcolor="#FFFFCC" cellspacing="0"
+						cellpadding="2" align="center">
+						<tr align="center" bgcolor="#996600">
+							<td colspan="3"><font color="#FFFFFF"><b>회원 가입</b></font></td>
+						</tr>
+						<tr>
+							<td width="24%">*아이디</td>
+							<td width="35%"><input type="text" name="mem_id" size="15"
+								id="sid"></td>
+							<td width="41%" id="idok">아이디를 적어 주세요.</td>
+						</tr>
+						<tr>
+							<td>*패스워드</td>
+							<td><input type="password" name="mem_passwd" size="15"
+								id="passwd"></td>
+							<td id="pwd1">패스워드를 적어주세요.</td>
+						</tr>
+						<tr>
+							<td>*패스워드 확인</td>
+							<td><input type="password" name="mem_repasswd" size="15"
+								id="repasswd"></td>
+							<td id="pwd2">패스워드를 확인합니다.</td>
+						</tr>
+						<tr>
+							<td>*이름</td>
+							<td><input type="text" name="mem_name" size="15"></td>
+							<td>고객실명을 적어주세요.</td>
+						</tr>
+						<tr>
+							<td>이메일</td>
+							<td><input type="text" name="mem_email" size="27"></td>
+							<td>이메일을 적어주세요</td>
+						</tr>
+						<tr>
+							<td>전화번호</td>
+							<td><input type="text" name="mem_phone" size="20"></td>
+							<td>연락처를 적어주세요</td>
+						</tr>
+						<tr>
+							<td>주소</td>
+							<td colspan="2">
+								<!-- 카카오 주소 api 링크 https://postcode.map.daum.net/guide#usage -->
+								<input type="text" id="sample4_postcode" placeholder="우편번호"
+								name="mem_zipcode"> <input type="button"
+								onclick="zipCode()" value="우편번호 찾기"><br> <input
+								type="text" id="sample4_roadAddress" placeholder="도로명주소"
+								name="mem_roadaddr"> <input type="text"
+								id="sample4_jibunAddress" placeholder="지번주소"> <span
+								id="guide" style="color: #999; display: none"></span> <input
+								type="text" id="sample4_detailAddress" placeholder="상세주소"
+								name="mem_detailaddr"> <input type="text"
+								id="sample4_extraAddress" placeholder="참고항목"
+								name="mem_extraaddr"> <input type="text" id="mem_addr"
+								name="mem_addr" style="display: none">
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" align="center"><input type="button"
+								value="회원가입" onclick="check()">&nbsp; &nbsp; &nbsp;
+								&nbsp; &nbsp; &nbsp; <input type="reset" value="다시쓰기"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

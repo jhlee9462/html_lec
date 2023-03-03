@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+ul {
+	background-color: rgb(53, 94, 169);
+	/* background-color:  #999 ; */
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	width: 100%;
+}
+
+li {
+	line-height: 30px;
+	float: left; /* 요소를 인라인 속성으로 변경 */
+	vertical-align: middle;
+	text-align: left;
+}
+
+li a, .dropbtn {
+	display: inline-block;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	margin: 0;
+	padding: 10px 20px;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+	/* background-color: red; */
+	background-color: #6799FF;
+}
+
+li.dropdown {
+	display: inline-block;
+}
+
+li a.active, a.active:hover {
+	/* background-color: #4CAF50; */
+	background-color: #6799FF;
+}
+
+.dropdown-content {
+	position: absolute; /* 드롭다운 시에 컨텐츠 안 움직임 */
+	overflow: hidden;
+	display: none; /* 드롭다운 이전에 컨텐츠 안보임 */
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 10px 16px 0px lightgray;
+	z-index: 1; /* 겹치는 상황에서 어느걸 우선으로 설정할지 */
+}
+
+.dropdown-content a {
+	color: black;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+</style>
+</head>
+<body>
+	<ul>
+		<li><a href="#home">Home</a></li>
+		<li><a href="#mail">메일</a></li>
+		<li><a href="#cafe">카페</a></li>
+		<li><a href="#blog">블로그</a></li>
+		<li class="dropdown"><a href="#shopping" class="dropbtn">쇼핑</a>
+			<div class="dropdown-content">
+				<a href="#">가전제품</a> <a href="#">의류/악세사리</a> <a href="#">가방/신발</a>
+			</div></li>
+		<li class="dropdown"><a href="#news" class="dropbtn">뉴스</a>
+			<div class="dropdown-content">
+				<a href="#">정치</a> <a href="#">경제</a> <a href="#">사회/문화</a>
+			</div></li>
+		<li style="float: right"><a href="#login" class="active">로그인</a>
+		</li>
+	</ul>
+</body>
+</html>

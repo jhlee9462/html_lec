@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var win;
+		
+		window.onload = function() {
+			win = window.open('win1.html', '', 'width=300, height=200');
+			win.moveTo(100, 100);
+		}
+		
+		window.setInterval(function() {
+			win.moveBy(20, 20);
+		}, 1000); // chrome 은 로컬파일에대한 iframe 수정을 허용하지 않기 때문에 동작 x
+		
+		window.setTimeout(function() {
+			win.close();
+		}, 5000);
+	</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<ul id="tea">
+		<li>아메리카노</li>
+		<li>카페라떼</li>
+		<li>콜드브루</li>
+	</ul>
+	<hr>
+	<script type="text/javascript">
+		var tea = document.getElementById("tea");
+		var child = tea.childNodes;
+		
+		for (var i = 0; i < child.length; i++) {
+			if (child[i].nodeName == "LI" )
+				document.write(i + "번째 데이터 : " + child[i].firstChild.nodeValue + "<br>");
+		}
+		
+	</script>
+</body>
+</html>

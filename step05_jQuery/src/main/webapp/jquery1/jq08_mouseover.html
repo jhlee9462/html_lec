@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="d1" style="border: 1px solid blue; width : 640px; height : 480px; padding : 100px">
+        <div id="d2" style="border : 1px solid red; width : 300px; height : 220px">
+            <img src="../image/cafelatte.jpg">
+        </div>
+    </div>
+
+    <script>
+        $().ready(function () {
+            /*$("img").mouseover(function () {
+                $(this).attr("src", "../image/americano.jpg");
+            });
+            $("img").mouseout(function () {
+                $(this).attr("src", "../image/cafelatte.jpg");
+            });*/
+
+            /*$("img").mouseover(function () {
+                $(this).attr("src", "../image/americano.jpg");
+            }).mouseout(function () {
+                $(this).attr("src", "../image/cafelatte.jpg");
+            });*/
+
+            /* mouseenter, mouseleave */
+            /*$("img").mouseenter(function () {
+                $(this).attr("src", "../image/americano.jpg");
+            }).mouseleave(function () {
+                $(this).attr("src", "../image/cafelatte.jpg");
+            });*/
+            // mouseover/mouseout : 직접 이벤트를 걸지 않은 자식 엘리먼트에 포인터가 이동해도 발생
+            $("#d1").mouseover(function () {
+                $("img").attr("src", "../image/americano.jpg");
+            }).mouseout(function () {
+                $("img").attr("src", "../image/cafelatte.jpg");
+            });
+            $("#d2").mouseover(function () {
+                $("img").attr("src", "../image/cafelatte.jpg");
+            }).mouseout(function () {
+                $("img").attr("src", "../image/americano.jpg");
+            });
+
+            // mouseenter/mouseleave : 자기 자신의 엘리먼트에 포인터가 와야 이벤트 발생
+            /*$("#d1").mouseenter(function () {
+                $("img").attr("src", "../image/americano.jpg");
+            }).mouseleave(function () {
+                $("img").attr("src", "../image/cafelatte.jpg");
+            });
+            $("#d2").mouseover(function () {
+                $("img").attr("src", "../image/cafelatte.jpg");
+            }).mouseout(function () {
+                $("img").attr("src", "../image/americano.jpg");
+            });*/
+        });
+    </script>
+</body>
+
+</html>

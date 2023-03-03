@@ -1,0 +1,23 @@
+<h3>권장도서</h3>
+<table border="1" width="300px">
+    <tr>
+        <td>과목</td>
+        <td>저자</td>
+        <td>가격</td>
+    </tr>
+    <tr>
+        <td>java</td>
+        <td>김자바</td>
+        <td>20,000</td>
+    </tr>
+    <tr>
+        <td>jsp</td>
+        <td>김jp</td>
+        <td>15,000</td>
+    </tr>
+    <tr>
+        <td>html</td>
+        <td>김웹</td>
+        <td>20,000</td>
+    </tr>
+</table>

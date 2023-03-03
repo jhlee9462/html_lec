@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+table {
+	border-collapse: collapse;
+}
+
+td {
+	text-align: center;
+	border-style: solid;
+	border-color: #ccc;
+	border-width: thin;
+	padding: 5px;
+}
+
+td#title {
+	border-style: none;
+	font-weight: bold;
+	font-size: 20px;
+	padding-bottom: 10px;
+}
+
+.rowname {
+	font-weight: bold;
+}
+
+.white {
+	color: white;
+}
+
+tr[id$=row] {
+	height: 40px;
+}
+
+.other-row {
+	height: 50px;
+}
+</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td colspan="7" id="title">미세먼지 농도</td>
+		</tr>
+		<tr class="rowname" id="first-row">
+			<td colspan="2">예보구간</td>
+			<td class="white" style="background-color: #43cbff;">좋음</td>
+			<td class="white" style="background-color: #81d733;">보통</td>
+			<td style="background-color: yellow;">약간나쁨</td>
+			<td style="background-color: orange;">나쁨</td>
+			<td class="white" style="background-color: red;" colspan="2">매우나쁨</td>
+		</tr>
+		<tr id="second-row">
+			<td colspan="2">예측 농도</td>
+			<td>0~30</td>
+			<td>31~80</td>
+			<td>81~120</td>
+			<td>121~200</td>
+			<td>201~300</td>
+			<td>301 ~</td>
+		</tr>
+		<tr class="other-row">
+			<td rowspan="2">행동 요령</td>
+			<td>노약자</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>장시간 실외 활동 가급적 자제</td>
+			<td>무리한 실외활동 자제요청 (특히 호흡기, 심질환자, 노약자)</td>
+			<td>실외활동 제한</td>
+			<td>실내생활</td>
+		</tr>
+		<tr class="other-row">
+			<td>일반</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>장시간 무리한 실외활동 자제</td>
+			<td>실외활동 자제</td>
+			<td>실외활동 자제</td>
+		</tr>
+	</table>
+</body>
+</html>

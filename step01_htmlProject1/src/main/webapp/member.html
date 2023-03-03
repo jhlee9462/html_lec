@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="" method="post">
+		<fieldset>
+			<legend>회원가입</legend>
+			<table>
+				<tr>
+					<td>아이디</td>
+					<td><input type="text" name="id" placeholder="아이디를 입력하시오"
+						required="required" autofocus="autofocus"></td>
+				</tr>
+				<tr>
+					<td>비밀번호</td>
+					<td><input type="password" name="pwd"
+						placeholder="비밀번호를 입력하시오" required="required"></td>
+				</tr>
+				<tr>
+					<td>비밀번호 재확인</td>
+					<td><input type="password" name="repwd"
+						placeholder="비밀번호를 재입력하시오" required="required"></td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>이름</td>
+					<td><input type="text" name="name" required="required"></td>
+				</tr>
+				<tr>
+					<td>성별</td>
+					<td><input type="radio" name="gender" value="male">남자<input
+						type="radio" name="gender" value="female">여자</td>
+				</tr>
+				<tr>
+					<td>생일</td>
+					<td><input type="date" name="date"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="email" name="email"
+						placeholder="본인확인 (이메일)" size="30" required="required"></td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td colspan="2"><select name="national-number">
+							<option value="kr">+82</option>
+							<option value="hk">+852</option>
+							<option value="sg">+65</option>
+					</select> <input type="text" name="phone" pattern="[0-9]{7,8}"
+						required="required"> <input type="button" value="인증">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="text" name="iden-num"
+						placeholder="인증번호" size="30" required="required"> <input
+						type="button" value="확인"></td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+</body>
+</html>

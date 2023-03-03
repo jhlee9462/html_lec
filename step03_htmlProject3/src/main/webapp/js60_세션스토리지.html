@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SessionStorage</title>
+</head>
+
+<body>
+    <h3>sessionStroage로 데이터 저장하기</h3>
+    <p>웹 브라우저의 탭이나 창을 닫으면 카운터는 리셋</p>
+    <P>F5 키를 누르면 리셋되지 않음</P>
+    <p><button onclick="clickIncrease()">카운트 증가</button></p>
+    <div id="counter"></div>
+
+    <script type="text/javascript">
+        function clickIncrease() {
+            if (typeof (Storage) != "undefined") {
+                if (sessionStorage.clickcount) {
+                    sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+                } else {
+                    sessionStorage.clickcount = 1;
+                }
+                document.getElementById("counter").innerHTML = "counter의 현재 값은 " + sessionStorage.clickcount + " 입니다<br>"
+            } else {
+                document.getElementById("counter").innerHTML = "이 문장은 사용자의 웹브라우저가 Web Storage API를 지원하지 않을때 나타나요<br>";
+            }
+        }
+    </script>
+</body>
+
+</html>
+<!-- 
+웹 스토리지
+브라우저(또는 클라이언트) 내부에 스토리지라는 저장소를 제공해 주는 기능
+이전에도 브라우저에는 개별 저장소로 쿠키를 제공해 주었음
+쿠키는 4kb의 텍스트를 담고있는 정보 저장소
+사용자의 컴퓨터에 텍스트로 저장되어 있어서 접근 및 확인이 가능
+
+1. 세션스토리지 sessionStroage
+    1개의 세션만 저장하는 데이터 객체
+    브라우저의 탭이나 창을 닫으면 저장된 데이터가 사라짐
+2. 로컬스토리지 localStorage
+    보관 기한이 없는 데이터를 저wkd하는 객체
+    브라우저의 탭이나 창을 닫거나 컴퓨터를 재시작하더라도 저장된 데이터가 사라지지 않음
+ -->

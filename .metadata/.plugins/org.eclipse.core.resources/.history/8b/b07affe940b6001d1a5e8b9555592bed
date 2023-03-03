@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form>
+		<h3>GET 방식으로 요청 파라미터 보내기</h3>
+		이름 : <input type="text" id="name"><br>
+		나이 : <input type="text" id="age"><br>
+		전화 : <input type="text" id="phone"><br>
+		<input type="button" id="getSend" onclick="startMethod()" value="보내기">
+	</form>
+	<script src="paramGet.js"></script>
+</body>
+</html>

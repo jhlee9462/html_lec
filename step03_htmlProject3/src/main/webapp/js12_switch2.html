@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var code = prompt("부서코드를 입력하세요(eng1, eng2, dev1, dev2)", "");
+		var dept;
+
+		switch (code) {
+		case "eng1":
+		case "eng2":
+			dept = "기술부";
+			break;
+		case "dev1":
+		case "dev2":
+			dept = "개발부";
+			break;
+		}
+		
+		document.write(dept + "에 근무하며 부서코드는 " + code + "입니다<br>");
+	</script>
+</body>
+</html>

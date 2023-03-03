@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/* 후손 선택자 */
+.header h3 {
+	color: red;
+}
+
+.head {
+	color: blue;
+}
+/* 자식 선택자 */
+.footer>h4 {
+	color: skyblue;
+}
+</style>
+</head>
+<body>
+	<div class="header">
+		<h3>test1</h3>
+		<div class="head">
+			<h4>test2</h4>
+		</div>
+	</div>
+
+	<div class="footer">
+		<h4>test3</h4>
+		<div class="foot">
+			<h4>test4</h4>
+		</div>
+	</div>
+</body>
+</html>

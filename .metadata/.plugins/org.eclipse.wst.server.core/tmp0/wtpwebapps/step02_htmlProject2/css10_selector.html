@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/* 인접 형제 선택자 */
+h3+h4 { /* h3 바로 뒤에 위치한 h4 */
+	color: red;
+}
+
+h3 ~h4 { /* h3 뒤에 위치하는 모든 h4 */
+	background-color: yellow;
+}
+
+h3 ~h4:hover { /* h3 뒤에 위치하는 모든 h4 에 hover 될 때 */
+	color: blue;
+}
+</style>
+</head>
+<body>
+	<h3>orion chocopie</h3>
+	<h4>orion chocopie</h4>
+	<h4>orion chocopie</h4>
+	<h5>orion chocopie</h5>
+	<h3>orion chocopie</h3>
+</body>
+</html>

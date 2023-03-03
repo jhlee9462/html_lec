@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+        .ex1 {
+            color: limegreen;
+        }
+
+        .ex2 {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>Hello Javascript</p>
+    <button id="btn1">초록색</button>
+    <button id="btn2">빨간색</button>
+
+    <script>
+        $().ready(function () {
+            // 문제. 버튼을 클릭할때마다 <p> 태그의 색상이 바뀌도록 작성해주세요
+            /*$("#btn1").click(function () {
+                $("p").removeClass().addClass("ex1");
+            });
+
+            $("#btn2").click(function () {
+                $("p").removeClass().addClass("ex2");
+            });*/
+
+            $("#btn1").click(function () {
+                $("p").css("color", "limegreen");
+            });
+            $("#btn2").click(function () {
+                $("p").css("color", "red");
+            })
+        });
+    </script>
+</body>
+</html>

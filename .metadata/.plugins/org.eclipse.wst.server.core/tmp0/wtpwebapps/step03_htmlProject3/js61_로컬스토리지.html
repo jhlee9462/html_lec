@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>localStorage로 데이터 저장하기</h3>
+    <p>웹 브라우저의 탭이나 창을 당아도 카운트는 리셋 되지 않아요</p>
+
+    <p>
+        <button id="countbtn">카운트 증가</button>
+        <button id="clearbtn">카운트 리셋</button>
+    </p>
+    <div id="counter"></div>
+
+    <script type="text/javascript">
+
+        countbtn.onclick = function () {
+            if (typeof (Storage) != "undefined") {
+                if (localStorage.clickcount) {
+                    localStorage.clickcount = Number(localStorage.clickcount) + 1;
+                    document.getElementById("counter").innerHTML = "현재 카운트 수는 " + localStorage.clickcount + " 입니다<br>";
+                } else {
+                    localStorage.clickcount = 1;
+                }
+            } else {
+                document.getElementById("counter").innerHTML = "이 문장은 사용자의 웹 브라우저가 Web Storage API 를 지원하지 않을때 나타나요<br>";
+            }
+        }
+
+        clearbtn.onclick = function () {
+            localStorage.clickcount = 0;
+        }
+    </script>
+</body>
+
+</html>

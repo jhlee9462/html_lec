@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js37_getElementById</title>
+</head>
+<body>
+	<input type="text" id="txt" size="30" name="text">
+	<input type="button" value="출력1" onclick="process1()">
+	<input type="button" value="출력2" onclick="process2()">
+	<br><br><br>
+	<div id="view1"></div>
+	<div id="view2"></div>
+	<script type="text/javascript">
+	/* innerText : 요소(태그, 엘레먼트)의 text를 가져옴 */
+		function process1() {
+			var ob = document.getElementById("txt").value;
+			document.getElementById("view1").innerText = ob;
+		}
+	/* innerHTML : 요소(태그, 엘레먼트)의 내용을 html로 해석해서 가져옴 */
+		function process2() {
+			var ob = document.getElementById("txt").value;
+			document.getElementById("view2").innerHTML = ob;
+		}
+	</script>
+</body>
+</html>

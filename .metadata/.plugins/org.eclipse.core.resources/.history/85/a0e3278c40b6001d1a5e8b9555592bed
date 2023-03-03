@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form>
+		<h3>GET 방식으로 요청 파라미터 보내기</h3>
+	</form>
+	<script src="paramGet.js"></script>
+</body>
+</html>

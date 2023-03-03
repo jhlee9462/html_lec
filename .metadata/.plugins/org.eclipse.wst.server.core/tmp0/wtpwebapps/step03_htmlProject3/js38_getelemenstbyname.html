@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	좋아하는 과일을 선택하세요<br><br>
+	<input type="checkbox" name="check" value="orange">오렌지<br>
+	<input type="checkbox" name="check" value="mango">망고<br>
+	<input type="checkbox" name="check" value="banana">바나나<br>
+	<input type="checkbox" name="check" value="apple">사과<br>
+	<input type="button" onclick="choice()" value="선택완료"><br><br><br>
+	<div id="disp"></div>	
+	<script type="text/javascript">
+		function choice() {
+			var size = document.getElementsByName("check").length;
+			var text = "좋아하는 과일은 ";
+			
+			for (var i = 0; i < size; i++) {
+				if (document.getElementsByName("check")[i].checked) {
+					text += document.getElementsByName("check")[i].value;
+					text += "&nbsp;"
+				}
+				
+			}
+			text += "입니다";
+			document.getElementById("disp").innerHTML = text;
+		}
+	</script>
+</body>
+</html>

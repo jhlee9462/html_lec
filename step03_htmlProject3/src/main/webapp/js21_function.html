@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form name="frm">
+		A값 : <input type="text" size="7" name="a">&nbsp;&nbsp;&nbsp;
+		B값 : <input type="text" size="7" name="b">&nbsp;&nbsp;&nbsp;
+		결과 : <input type="text" size="7" name="rs" readonly="readonly">&nbsp;&nbsp;&nbsp;<br><br>
+		<input type="button" name="+" value="더하기" onclick="plusFunc()">
+		<input type="button" name="*" value="나누기" onClick="diviFunc()">
+	</form>
+
+	<script type="text/javascript">
+		function plusFunc() {
+			var a = parseInt(frm.a.value), b = parseInt(frm.b.value);
+			
+			if (isNaN(a) || isNaN(b)) {
+				alert("입력된 값이 숫자가 아니에요");
+				frm.a.value = "";
+				frm.b.value = "";
+				frm.a.focus();
+				return;
+			}
+			
+
+			frm.rs.value = a + b;
+		}
+		function diviFunc() {
+			var a = parseInt(frm.a.value), b = parseInt(frm.b.value);
+			var rs = a / b;
+			
+			if (isNaN(a) || isNaN(b)) {
+				alert("입력된 값이 숫자가 아니에요");
+				frm.a.value = "";
+				frm.b.value = "";
+				frm.a.focus();
+				return;
+			}
+			
+			if (!isFinite(rs)) {
+				alert("0으로 나눌 수 없습니다");
+				frm.a.value = "";
+				frm.b.value = "";
+				frm.a.focus();
+				return;
+			}
+			
+			frm.rs.value = a / b;
+		}
+	</script>
+</body>
+</html>

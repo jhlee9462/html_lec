@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+        .container {
+            position: absolute;
+            top: 50px;
+            left: 150px;
+            width: 400px;
+            height: 500px;
+            border: 10px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <span style="color: gray; font-size: 15px;">크게 보시려면 이미지를 클릭하세요</span>
+    <br><br>
+    <img id="img1" src="../image/cat1.png" width="50px" height="50px"><br>
+    <img id="img2" src="../image/cat2.png" width="50px" height="50px"><br>
+    <div id="rs" class="container"></div>
+
+    <script>
+        $(function () {
+            $("img").click(function () {
+                let src = $(this).attr("src");
+                $("#rs").html("<img src='" + src + "'")
+            });
+        });
+    </script>
+</body>
+</html>

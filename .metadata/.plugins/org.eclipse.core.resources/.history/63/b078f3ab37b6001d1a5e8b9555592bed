@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="button" value="simple.html" onclick="load(value)">
+	<script>
+		let httpRequest = null;
+		
+		function load(url) {
+			httpRequest = getXMLHttpRequest(); // 통신 객체 생성
+			// 서버와의 상호작용
+			// XHR은 페이지 새로고침 없이 url에서 데이터 가져오기 가능
+			// 사용자의 작업을 방해하지 않고 페이지 일부의 새로고침 가능
+			
+			// XMLHttpRequest 객체가 상태 정보를 가지고 있음
+			// readyState 프로퍼티가 값을 가지고 있음.
+			// 상태정보로 응답이 왔는지, 안왔는지를 확인 가능
+			httpRequest.onreadystatechange = viewMessage(); // 처리할 함수
+		}
+		
+		function viewMessage() {
+			
+		}
+	</script>
+</body>
+</html>

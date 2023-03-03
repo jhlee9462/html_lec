@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form name="f">
+		이름 : <input type="text" name="irum">
+		<input type="button" value="입력" onclick="helloToServer()">
+	</form>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+
+<body>
+	<h3>web worker test</h3>
+	<button id="btnstart" class="btn">Start</button>
+	<button id="btnstop" class="btn">Stop</button>
+
+	<div id="disp"></div>
+
+	<script>
+		var worker = null;
+		function init() {
+			var btnstart = document.getElementById("btnstart");
+			var btnstop = document.getElementById("btnstop");
+			var disp = document.getElementById("disp");
+
+			btnstart.addEventListener("click", startWorker);
+			btnstop.addEventListener("click", stopWorker);
+
+			function startWorker() {
+				if (!window.Worker) {
+					console.log("웹 워커를 지원하지 않는 브라우저입니다");
+				}
+
+				stopWorker();
+
+				worker = new Worker("worker.js");
+				worker.postMessage("");
+
+				worker.onmessage = function(event) {
+					console.log("호출 메세지 : ", event.data);
+					disp.innerHTML += event.data + "<br>";
+				}
+			}
+			
+			function stopWorker() {
+				if (worker) {
+					worker.terminate();
+					worker = null;
+				}
+			}
+		}
+
+		window.addEventListener("load", init);
+	</script>
+</body>
+
+</html>
+
+<!-- 
+    웹 워커
+        백그라운드에서 멀티쓰레드를 동작 시킬수 있는 스크립트
+        웹페이지는 기본적으로 단일쓰레드, 웹워커를 이용하여 멀티쓰레드 지원
+
+    웹 워커의 활용 범위
+        1. 사용자 인터페이스를 방해하지 않고 지속적인 작업을 해야할 경우
+        2. 복잡한 수식의 계산
+        3. 로컬이나 원격지에 있는 리소스에 대한 엑세스 작업을 할 경우
+         4.백그라운드에서 오랜시간 작업을 해야 하는 경우
+
+    문법
+        var 객체명 = new Worker("파일명");
+
+    1. onmessage : 이벤트 처리기, 워커로부터 메세지를 전달 받을 때 발생하는 이벤트
+    2. onerror : 워커가 익셉션 발생했지만 내부적으로 처리가 되지 않은 경우 발생하는 이벤트
+    3. postMessage() : 데이터 전송함수
+    4. terminate() : 워커 스레드의 강제 종료
+ -->

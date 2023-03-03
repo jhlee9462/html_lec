@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+    이름 : <input type="text" id="name" placeholder="이름을 입력하세요">
+    <div id="rs"></div>
+    <script>
+        /* focus() : 마우스 포인터가 대상 엘리먼트에 위치할 때의 이벤트를 처리하는 이벤트 핸들러
+           blur() : 마우스 포인터가 대상 엘리먼트에서 포커스를 잃었을 때의 이벤트를 처리하는 이벤트 핸들러
+        */
+        $().ready(function () {
+            $("input").focus(function () {
+                $(this).css('background-color', 'orange');
+            });
+
+            $("input").blur(function () {
+                /* $(this).css('background-color', 'red'); */
+
+                let x = $("input").val();
+                $("#rs").text(x);
+
+                if (x === '') {
+                    $(this).css("background-color", "yellow");
+                } else {
+                    $(this).css("background-color", "red");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

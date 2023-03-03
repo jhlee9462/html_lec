@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form name="f">
+		이름 : <input type="text" name="irum">
+		<input type="button" value="입력" onclick="helloToServer()">
+	</form>
+	<div id="display"></div>
+	
+	<script>
+		function helloToServer() {
+			let xhr = new XMLHttpRequest();
+			
+			xhr.onreadystatechange = function () {
+				if (xhr.readyState === 4 && xhr.status === 200) {
+					display.innerHTML = xhr.responseText;
+				}
+			};
+			
+			let param = "irum=" + document.f.irum.value;
+			
+			xhr.open("GET", "hello.jsp", true);
+			xhr.send(null);
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+function sum() {
+	let xhr = new XMLHttpRequest();
+	let base = document.getElementById("base").value;
+	let height = document.getElementById("height").value;
+	let url = "sumTest.jsp?" + getParameter();
+	
+	xhr.onreadystatechange = function () {
+		if (xhr.status === 200 && xhr.readyState === 4) {
+			
+		}
+	}
+}
+
+function getParameter() {
+	
+}

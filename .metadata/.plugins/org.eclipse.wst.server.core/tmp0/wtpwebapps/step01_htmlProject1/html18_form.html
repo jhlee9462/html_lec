@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="html01_h.html" method="get">
+		<table border="">
+			<tr>
+				<td>아이디</td>
+				<td><input type="text" name="id" size="20"></td>
+			</tr>
+			<tr>
+				<td>비밀번호</td>
+				<td><input type="text" name="pwd" size="20"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+				<input type="button" value="목록">
+				<input type="submit" value="전송">
+				<input type="reset" value="취소">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
+<!-- 
+	form 에서 데이터를 넘기는 방식
+	method="get"
+	get 방식
+		url?id=asdf&pwd=zxcv
+	submit 을 클릭하면 action의 위치로 이동하면서 input 태그의 값을 가지고 이동
+	
+	post방식
+		주소의 끝에 값을 달고 가지 않고 페이지 내부에 포함해서 가지고 가는 방식
+ -->

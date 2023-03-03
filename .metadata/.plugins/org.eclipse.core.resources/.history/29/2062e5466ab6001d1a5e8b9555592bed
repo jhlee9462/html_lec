@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>2초 간격으로 뉴스 요청 AJAX</h2>
+	<table border="1" style="height: 100px; width: 500px; text-align: center">
+		<tr>
+			<td>뉴스내용</td>
+		</tr>
+		<tr>
+			<td id="demo">잠시 기다리세요.....</td>
+		</tr>
+	</table>
+	
+	<script>
+		window.onload = () => {
+			setInterval(() => {
+				let xhr = new XMLHttpRequest();
+				
+				xhr.onload = () => {
+					
+				};
+				xhr.open("get", "newjson.jsp", true);
+			}, 2000);
+		};
+	</script>
+</body>
+</html>

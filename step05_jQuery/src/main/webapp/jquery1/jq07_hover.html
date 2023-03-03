@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+        div {
+            width: fit-content;
+        }
+        .bold {
+            font-size: 17px;
+            font-weight: 700;
+            color: limegreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div>강아지</div>
+    <div>고양이</div>
+    <div>고라니</div>
+    <div>원숭이</div>
+    <div>고릴라</div>
+    <script>
+        /* hover : 객체에 마우스가 올라왔을 때 rollover */
+        $().ready(function () {
+            /*$("div").hover(function () {
+                $(this).css({
+                    'font-size': '17px',
+                    'font-weight': '700'
+                });
+            }, function () {
+                $(this).removeAttr("style");
+            });*/
+
+            /*$("div").hover(function () {
+                $(this).addClass("bold"); // addClass() : 요소에 지정한 클래스를 추가
+            }, function () {
+                $(this).removeClass("bold");
+            });*/
+
+            // mouseover, mouseout
+            $("div").mouseover(function () {
+                $(this).css({
+                    "font-size" : "17px",
+                    "font-weight" : "700",
+                    "color" : "limegreen"
+                });
+            });
+            
+            $("div").mouseout(function () {
+                $(this).removeAttr("style");
+            });
+        });
+    </script>
+</body>
+
+</html>

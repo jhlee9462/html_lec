@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<button onclick="choice()">클릭하세요</button>
+	<br>
+	<ul>
+		<li>아메리카노</li>
+		<li>카페라떼</li>
+		<li>콜드브루</li>
+	</ul>
+	<div id="disp"></div>
+	<script type="text/javascript">
+		function choice() {
+			var size = document.getElementsByTagName("li").length;
+			var text = "";
+
+			for (var i = 0; i < size; i++) {
+				text += document.getElementsByTagName("li")[i].innerHTML;
+				text += "&nbsp;"
+
+			}
+			document.getElementById("disp").innerHTML = text;
+		}
+	</script>
+</body>
+</html>

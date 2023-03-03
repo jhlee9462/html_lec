@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>생성자를 이용한 객체 생성</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function User(name, age) {
+			this.name = name;
+			this.age = age;
+			this.view = function () {
+				document.write("My name is " + this.name + ".<br>");
+				document.write("I'm " + this.age + " years old.<br>");
+			}
+		}
+
+		document.write(typeof User + "<br>"); // function
+		// 인스턴스 생성
+		var ob1 = new User("pororo", 23);
+		var ob2 = new User("cron", 21);
+		
+		document.write(typeof ob1 + "<br>");
+		
+		ob1.view();
+		ob2.view();
+		
+	</script>
+</body>
+</html>

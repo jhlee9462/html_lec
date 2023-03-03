@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="html01_h.html">
+		<fieldset>
+			<legend>개인 정보 입력</legend>
+			<table>
+				<tr>
+					<td><label for="name">이름</label></td>
+					<td><input type="text" name="name" id="name" placeholder="이름을 입력하세요" required="required" autofocus="autofocus"></td>
+				</tr>
+				<tr>
+					<td><label for="email">이메일</label></td>
+					<td><input type="email" name="email" id="email" placeholder="이메일을 입력하세요"></td>
+				</tr>
+				<tr>
+					<td><label for="phone">전화번호</label></td>
+					<td><input type="text" name="phone" id="phone" pattern="[0-1]{3}-[0-9]{4}-[0-9]{4}" title="###-####-####" placeholder="전화번호를 입력하세요"></td>
+				</tr>
+				<tr>
+					<td><label for="photo">사진</label></td>
+					<td><input type="file" name="photo" id="photo" accept="image/jpg, image/gif"></td>
+				</tr>
+			</table>
+			<input type="submit">
+		</fieldset>
+	</form>
+</body>
+</html>
+<!-- 
+	form 요소는 웹 문서가 서로 상호 작용을 할 수 있도록 하는 역할을 담당
+	<form>
+		클라이언트로부터 입력받아 서버로 보내기 위한 요소를 작성
+	</form>
+	
+	action속성 : form의 내용을 처리하기 위한 서버 URI를 설정
+	method속성 : 클라이언트 데이터를 서버로 보내는 방법
+		get방식 : 서버로 데이터를 보낼 때 주소에 값을 붙이는 방식. 255 바이트 이하의 데이터만 보낼 수 있음
+		post방식 : 데이터의 크기가 크거나 보안이 필요한 값을 보낼 때 사용하는 방식 
+ -->

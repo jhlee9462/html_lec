@@ -1,0 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	String[] news = {
+			"'이재명 체포동의안' 무기명 표결 시작",
+			"이재명 '정권퇴행 경고 보내달라'…신상발언서 체포안 부결 호소",
+	};
+%>

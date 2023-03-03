@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>onreadystatechange 속성 사용 - xml 응답</h2>
+	<hr>
+	
+	<script>
+		window.onload = function() {
+			let xhr = new XMLHttpRequest();
+			
+			xhr.onreadystatechange = function() {
+				if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) { // XMLHttpRequest.DONE ==> 4
+					/* alert(xhr.responseXML); */
+					let xml = xhr.responseXML;
+					let rootE = xml.getElementsByTagName("testxml");
+					
+					alert(rootE[0].childNodes.length);
+				}
+			};
+			
+			xhr.open("get", "sample.xml", true);
+			xhr.send(null);
+		};
+	</script>
+</body>
+</html>

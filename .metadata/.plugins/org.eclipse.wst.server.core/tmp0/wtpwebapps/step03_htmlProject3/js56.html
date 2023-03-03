@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="image/bear.jpg" id="bear" style="display: none">
+	<canvas id="mycanvas" width="800px" height="600px"></canvas>
+
+	<script type="text/javascript">
+		var canvas = document.getElementById("mycanvas");
+        /** @type {CanvasRenderingContext2D} */
+		var ctx = canvas.getContext('2d');
+
+		var image = document.getElementById("bear");
+
+		image.addEventListener("load", () => {
+			ctx.drawImage(image, 0, 0, 250, 200);
+		});
+		
+        ctx.font = "40px Arial Black";
+        ctx.strokeStyle = "rgb(47, 157, 39)";
+
+        ctx.fillStyle = "rgb(0, 34, 102)";
+        ctx.fillText("Welcome To My Page", 250, 150);
+
+        ctx.strokeText("HTML Canvas", 250, 200);
+	</script>
+</body>
+</html>
